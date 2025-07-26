@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  <!-- Existing meta tags -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Larney Graphics | Creative Design Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/message/ZXO3CIDXOI5ZE1" class="whatsapp-btn" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Navbar -->
+<header>
+  <nav>
+    <div class="logo"> 
+         <img src="./KUGEMAAsset 2@2x.png" alt="Larney logo">Larney Graphics</div>
+  
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('show')">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+  </nav>
+</header>
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="./images/WhatsApp Video 2025-07-15 at 12.39.17_5d561fcb.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-overlay">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Turning Brands to visual Experiences</h1>
+        <p>Bring your brand to life with stunning visuals and bold ideas.</p>
+        <a href="#portfolio" class="cta-btn">Explore Portfolio</a>
+      </div>
+     
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about-container">
+    <div class="about-text">
+      <p>
+       Hi, I’m Leo — a passionate graphic and product designer who loves bringing ideas to life through clean, thoughtful design. Whether it’s branding, web design, packaging, or digital content, I enjoy creating work that feels fresh, intentional, and connects with people.
+
+I’ve had the chance to work on a variety of creative projects, and every new challenge excites me. My approach combines strategy and creativity, with a strong eye for detail and storytelling.
+
+I’m always up for collaborating, learning, and pushing boundaries — especially when it means making brands look and feel their best.
+
+Let’s build something awesome together</p>
+
+      <!-- Adobe/Pixellab icons section -->
+      <div class="tools-icons">
+        <h3>skills</h3>
+        <img src="./images/Asset 4KIP .png" alt="Photoshop Icon" />
+        <img src="./images/Asset 5KIP .png" alt="Illustrator Icon" />
+        <img src="./images/pixellabAsset 8KIP .png" alt="Pixellab Icon" />
+      </div>
+    </div>
+
+    <div class="stats-container">
+      <div class="stat-card"><h3>150+</h3><p>Projects Completed</p></div>
+      <div class="stat-card"><h3>80+</h3><p>Satisfied Customers</p></div>
+      <div class="stat-card"><h3>3+</h3><p>Years Experience</p></div>
+      <div class="stat-card"><h3>100%</h3><p>Client Satisfaction</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SERVICES SECTION -->
+<section id="services">
+  <h2>Services</h2>
+  <ul>
+    <li>Logo Design</li>
+    <li>Brand Identity</li>
+    <li>Print Design</li>
+    <li>Web Design</li>
+  </ul>
+</section>
+
+ <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Work</h2>
+   <div class="portfolio-filters">
+  <button class="selected" onclick="filterWork(event, 'branding')">Logo & Branding</button>
+  <button onclick="filterWork(event, 'posters')">Posters</button>
+  <button onclick="filterWork(event, 'social')">Social Media</button>
+  <button onclick="filterWork(event, 'website')">Web Design</button>
+ <a href="gallery.html" class="view-all-btn">View All</a>
+
+</div>
+
+    <div id="branding" class="portfolio-grid">
+      <div class="project-card"><img src="images/cookieAsset 2KIP .png" alt=""><p>Cookie Branding</p></div>
+      <div class="project-card"><img src="./images/Asset 5martik.png" alt=""><p>Matik Paws Branding </p></div>
+    </div>
+
+    <div id="posters" class="portfolio-grid" style="display: none;">
+      <div class="project-card"><img src="./images/mt kipipiri poster.png" alt=""><h4>mobilisation Poster</h4><p>Promotional poster for a hiking event — Kipipiri Transverse.</p></div>
+      <div class="project-card"><img src="./images/top cow sold here.png" alt=""><h4>Advertisement poster </h4><p>Product ad poster for TopCow Probiotic Yoghurt</p></div>
+      <div class="project-card"><img src="./images/kip-Recovered.png" alt=""><h4>Event Poster</h4><p>Poster for the Annual KIP South Rift Region Sports Day – 2025</p></div>
+      <div class="project-card"><img src="./images/Mentorship_x_Pads_Drive_x_Boychild_Empowerment[2].png" alt=""><h4>Empowerment Poster</h4><p>Mentorship & Pads Drive + Boychild Empowerment at Gachoka Primary & Junior Secondary School</p></div>
+    </div>
+
+    <div id="social" class="portfolio-grid" style="display: none;">
+      <div class="project-card"><img src="./images/bim1.png" alt=""><p>Linked in post for BIM construction</p></div>
+      <div class="project-card"><img src="./images/instagram.png" alt=""><p>instagram post for cookie brand</p></div>
+      <div class="project-card"><img src="./images/PSD Happy Eid Al Adha Flyer Editable Template _ PSD Free Download - Pikbest.png" alt=""><p>Eid Al Adha post for Lance Foundation</p></div>
+      <div class="project-card"><img src="./images/Untitled-1.png" alt=""><p>mother's day post for Lance Foundation</p></div>
+    </div>
+
+  <div id="website" class="portfolio-grid" style="display: none;">
+  <div class="project-card">
+    <img src="./images/WhatsApp Image 2025-07-26 at 23.33.55_d41ea33c.jpg" alt="Website Screenshot 1">
+    <p>cookie crunch Website</p>
+    <a href="https://larneygraphics.github.io/cookie-/" target="_blank" class="view-site-btn">View Website</a>
+  </div>
+  <div class="project-card">
+    <img src="./images/WhatsApp Image 2025-07-26 at 23.44.41_f666c90a.jpg" alt="Website Screenshot 2">
+    <p>personal portfolio 1</p>
+    <a href="https://larneygraphics.github.io/larneycreatives/" target="_blank" class="view-site-btn">View Website</a>
+  </div>
+</div>
+
+  </section>
+<section id="testimonials">
+  <h2>Testimonials</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <img src="../images/Asset 1matik paws.jpg" alt="Sarah" class="testimonial-img">
+      <p>"Leo captured our brand essence perfectly. From the earthy tones to the playful yet professional logo, every design element reflected our mission of caring for pets. His creativity and branding insight gave 
+        Matik Paws a strong visual identity we’re proud of"</p>
+      <div class="stars">★★★★★</div>
+      <h4>– Martin .M</h4><p>C.E.O Matik Paws</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="./images/20250306_212153.png" alt="James" class="testimonial-img">
+      <p>"Leo's contribution to our community outreach event was exceptional. His posters captured the heart of our mission, helping us mobilize more support than ever before. 
+        Talented and passionate!"</p>
+      <div class="stars">★★★★☆</div>
+      <h4>– Dennis Gichuki</h4>
+      <p>C.E.O Lance Foundation</p>
+    </div>
+    <div class="testimonial-card">
+      <img src="./images/Asset 2cookie logo.png" alt="Grace" class="testimonial-img">
+      <p>"Leo delivered beyond expectations! From product photography to branding posters, every piece was vibrant and aligned with our brand identity.
+         His designs helped boost our online engagement!"</p>
+      <div class="stars">★★★★★</div>
+      <h4>– Grace Nyambura</h4>
+      <p>Managing Director cookie</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Get in Touch</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Tell me about your project..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <div class="social-links">
+    <a href="https://www.tiktok.com/@larneygraphics" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    <a href="https://www.linkedin.com/in/larneygraphics" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+    <a href="https://wa.me/254701740924" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Larney Graphics</h3>
+        <p>Crafting bold visuals for impactful brands since 2023.</p>
+        <div class="footer-social">
+          <a href="https://www.tiktok.com/@larneygraphics" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.linkedin.com/in/larneygraphics" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://wa.me/254701740924" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Brand Identity</a></li>
+          <li><a href="#">Print Design</a></li>
+          <li><a href="#">Web Design</a></li>
+        
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Contact Info</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> larneygraphics@gmail.com</li>
+          <li><i class="fas fa-phone"></i> +254 701740924</li>
+          <li><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Larney Graphics. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- FILTER SCRIPT -->
+<script>
+  function filterWork(e, category) {
+    const categories = ['branding', 'posters', 'social', 'website'];
+
+    // Show/hide project sections
+    categories.forEach(cat => {
+      const section = document.getElementById(cat);
+      section.style.display = (cat === category) ? 'grid' : 'none';
+    });
+
+    // Remove highlight from all buttons
+    document.querySelectorAll('.portfolio-filters button.selected').forEach(btn => {
+      btn.classList.remove('selected');
+    });
+
+    // Highlight the clicked button if it exists
+    if (e) {
+      e.target.classList.add('selected');
+    } else {
+      // On load, highlight the first button (Logo & Branding)
+      const firstButton = document.querySelector('.portfolio-filters button');
+      if (firstButton) {
+        firstButton.classList.add('selected');
+      }
+    }
+  }
+
+  // Run once the page is fully loaded
+  window.addEventListener('DOMContentLoaded', () => {
+    filterWork(null, 'branding'); // Show branding projects by default
+  });
+</script>
+
+
+
+
+</body>
+</html>
