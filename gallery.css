@@ -1,0 +1,335 @@
+/* ===========================
+   RESET & BASE STYLING
+=========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+.main-nav {
+  background-color: #00274d; /* Navy Blue */
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+  padding: 6px 10px;
+  transition: background 0.3s ease;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: #ffcc00; /* Gold hover */
+  color: #00274d;
+  border-radius: 4px;
+}
+
+/* ===========================
+   HAMBURGER MENU (Styled)
+=========================== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  width: 30px;
+  height: 25px;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+  position: relative;
+  z-index: 1100;
+  transition: transform 0.3s ease;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #ffffff; /* Gold bars */
+  border-radius: 2px;
+  transition: all 0.4s ease;
+}
+
+/* When active, transform to "X" */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile nav menu styling */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #00274d; /* Navy */
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 220px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+
+  .nav-menu.show {
+    display: flex;
+    animation: slideIn 0.4s ease;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Slide-in animation for mobile menu */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===========================
+   GALLERY SECTION
+=========================== */
+.gallery-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.gallery-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #00274d; /* Navy Blue */
+}
+
+.gallery-header p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* ===========================
+   FILTER BUTTONS
+=========================== */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ddd;
+  color: #1a1a1a;
+  cursor: pointer;
+  border-radius: 9px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #ffcc00; /* Gold */
+  color: #00274d; /* Navy */
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(255, 204, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   GALLERY GRID
+=========================== */
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===========================
+   GALLERY CARD
+=========================== */
+.gallery-item {
+  background: white;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Info Overlay */
+.item-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 39, 77, 0.9); /* Navy overlay */
+  color: white;
+  padding: 15px;
+  text-align: left;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .item-info {
+  transform: translateY(0);
+}
+
+.item-info h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.item-info p {
+  font-size: 0.95em;
+  opacity: 0.9;
+}
+
+/* ===========================
+   WEBSITE CARD STYLING
+=========================== */
+.gallery-item.website .item-info {
+  position: relative;
+  transform: none;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+.gallery-item.website .item-info h3 {
+  color: #00274d;
+}
+
+.gallery-item.website .item-info p {
+  color: #555;
+}
+
+/* View Website Button */
+.view-site-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #ffcc00;
+  color: #00274d;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.view-site-btn:hover {
+  background-color: #e6b800;
+  color: #fff;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #00274d;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 6px;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
